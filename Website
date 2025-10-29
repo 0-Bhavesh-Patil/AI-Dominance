@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Digital | AI Visibility & Content Strategy</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Strict Proton Dark Aesthetic Colors & Geometric Precision */
+        :root {
+            --color-primary-dark: #000010; 
+            --color-secondary-dark: #1F2937; 
+            --color-accent-blue: #6366F1; /* Primary Indigo Accent */
+            --color-text-light: #E5E7EB; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary-dark);
+            color: var(--color-text-light);
+            overflow-x: hidden; /* Crucial for cursor animation */
+        }
+
+        h1, h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+        }
+
+        /* Subtle Card Styling (Impressive Depth) */
+        .proton-card {
+            transition: all 0.3s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: var(--color-secondary-dark);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .proton-card:hover {
+            border-color: var(--color-accent-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+        }
+        
+        /* Metrics animation styling */
+        .animated-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Dynamic Background: Subtle Animated Grid */
+        .background-grid {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 60s linear infinite;
+        }
+        @keyframes grid-move {
+            from { background-position: 0 0; }
+            to { background-position: 50px 50px; }
+        }
+
+        /* Mouse Light for Interactive Element (CURSOR FOLLOWING) */
+        #mouse-light {
+            position: fixed;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.25) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 9999; 
+            filter: blur(45px); 
+            transform: translate(-50%, -50%); 
+            transition: opacity 0.3s ease-out;
+            opacity: 0.8; /* Always visible for impressiveness */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Mouse Light Element -->
+    <div id="mouse-light"></div>
+
+    <!-- Fixed Header / Navigation (Optimized for new flow) -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <!-- Logo (Clean and bold) -->
+            <div class="text-2xl font-extrabold text-white tracking-wide">
+                <span class="text-indigo-400 font-bold">//</span> Synapse Digital
+            </div>
+            
+            <!-- Navigation Links (Updated for new flow: Services, Demo, Advantages, Contact) -->
+            <nav class="space-x-6 hidden md:flex">
+                <a href="#home" class="text-gray-300 hover:text-white transition duration-200 font-medium">Home</a>
+                <a href="#services" class="text-gray-300 hover:text-white transition duration-200 font-medium">Services</a>
+                <a href="#audit" class="text-gray-300 hover:text-white transition duration-200 font-medium">Live Demo</a>
+                <a href="#advantages" class="text-gray-300 hover:text-white transition duration-200 font-medium">Advantages</a>
+            </nav>
+            
+            <!-- Prominent CTA Button (Functional Design) -->
+            <a href="#contact" class="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-lg transition duration-200">
+                Schedule Consultation
+            </a>
+            
+            <!-- Mobile Menu Icon --><button class="md:hidden text-white text-2xl">☰</button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+
+        <!-- 1. Hero Section -->
+        <section id="home" class="pt-32 pb-24 px-6 lg:px-8 text-center bg-gradient-to-b from-[var(--color-primary-dark)] to-gray-900">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-indigo-400 text-base font-semibold uppercase tracking-widest mb-4">The Future of Digital Authority</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-8">
+                    Propel Your Brand to <span class="text-indigo-400">AI Dominance</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+                    In an AI-first world, your brand's influence is measured by its presence in generative responses. Synapse Digital architects your visibility, ensuring AI platforms naturally recommend and endorse your business.
+                </p>
+                <a href="#services" class="inline-flex items-center text-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-700 py-3 px-8 rounded-lg transition duration-300 shadow-lg shadow-indigo-500/40">
+                    Discover Our AI Strategies &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Metrics Section (Immediate Proof) -->
+        <section id="metrics" class="py-16 px-6 lg:px-8 bg-gray-900">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto p-8 rounded-xl border border-gray-700 bg-gray-900 shadow-xl">
+                <div class="text-center">
+                    <p class="animated-number text-5xl font-extrabold text-indigo-400 mb-1">87%</p>
+                    <p class="text-gray-400 text-base">Consumers Trust AI Recommendations</p>
+                </div>
+                <div class="text-center">
+                    <p class="animated-number text-5xl font-extrabold text-indigo-400 mb-1">2.5B+</p>
+                    <p class="text-gray-400 text-base">Daily AI Chatbot Interactions</p>
+                </div>
+                <div class="text-center">
+                    <p class="animated-number text-5xl font-extrabold text-indigo-400 mb-1">340%</p>
+                    <p class="text-gray-400 text-base">Average Visibility Increase</p>
+                </div>
+                <div class="text-center">
+                    <p class="animated-number text-5xl font-extrabold text-indigo-400 mb-1">24/7</p>
+                    <p class="text-gray-400 text-base">Continuous AI Monitoring</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Section (The Solution - Geometric Grid Background) -->
+        <section id="services" class="py-24 px-6 lg:px-8 bg-[var(--color-primary-dark)] relative overflow-hidden">
+             <!-- Subtle Animated Grid Layer -->
+            <div class="absolute inset-0 background-grid opacity-10 pointer-events-none"></div>
+
+            <h2 class="text-4xl font-bold text-white text-center mb-10 relative z-10">
+                Our Specialized Services
+            </h2>
+            <p class="text-lg text-gray-400 text-center max-w-4xl mx-auto mb-16 relative z-10">
+                We bridge the gap between traditional digital marketing and the rapidly evolving AI landscape, employing sophisticated strategies to position your brand at the apex of AI-driven discovery.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+                
+                <!-- Service 1 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">01</span>
+                    <h3 class="text-xl font-bold text-white mb-2">AI Content Optimization</h3>
+                    <p class="text-gray-400 leading-relaxed">We meticulously restructure and enhance your digital content, aligning it with how advanced AI models interpret, process, and retrieve information.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">02</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Conversational AI Strategy</h3>
+                    <p class="text-gray-400 leading-relaxed">Develop bespoke strategies that cement your brand as the definitive recommendation when AI systems address queries within your domain.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">03</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Knowledge Graph Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">Ensure your business information is immaculately represented and validated across the critical knowledge graphs and structured data sources that AI models inherently reference.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">04</span>
+                    <h3 class="text-xl font-bold text-white mb-2">AI Reputation Management</h3>
+                    <p class="text-gray-400 leading-relaxed">Proactively monitor and strategically enhance how AI systems perceive and present your brand's reputation and sentiment across all platforms.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">05</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Competitor AI Analysis</h3>
+                    <p class="text-gray-400 leading-relaxed">Gain unparalleled insights into how your competitors are referenced and positioned by AI systems, identifying crucial opportunities for your brand to decisively outperform.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-6 rounded-xl shadow-md proton-card hover:shadow-lg">
+                    <span class="text-3xl font-extrabold text-indigo-400 mb-4 block">06</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Future-Ready Optimization</h3>
+                    <p class="text-gray-400 leading-relaxed">Maintain a dominant edge in an ever-evolving landscape. Our team continuously adapts and innovates strategies to guarantee sustained visibility.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Interactive Audit Tool (Live Demo / Proof of Value) -->
+        <section id="audit" class="py-24 px-6 lg:px-8 bg-gray-900">
+            <h2 class="text-4xl font-bold text-white text-center mb-6">
+                Live AI Visibility Console
+            </h2>
+            <p class="text-lg text-gray-400 text-center max-w-3xl mx-auto mb-12">
+                Experience the tangible power of **AI Content Optimization**. Paste any piece of your existing content below for an instant, strategic 3-point AI visibility audit powered by Gemini.
+            </p>
+
+            <div class="max-w-5xl mx-auto p-8 rounded-xl border border-indigo-700 bg-gray-900 shadow-2xl shadow-indigo-900/50">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Input Console -->
+                    <div>
+                        <label for="content-input" class="block text-lg font-medium text-gray-300 mb-3">Your Content for Audit:</label>
+                        <textarea id="content-input" rows="8" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-indigo-500 focus:border-indigo-500 placeholder-gray-500 text-base resize-none" placeholder="e.g., 'We provide enterprise-grade cybersecurity solutions for cloud infrastructure with 24/7 managed detection and response services...'"></textarea>
+                        
+                        <button onclick="runAudit()" class="w-full mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-200 text-lg shadow-md" id="audit-button">
+                            Run Live Strategy Audit &rarr;
+                        </button>
+                    </div>
+
+                    <!-- Output Console -->
+                    <div>
+                        <p class="text-lg font-medium text-gray-300 mb-3">Audit Results <span class="text-indigo-400">(Powered by Gemini)</span>:</p>
+                        <div id="audit-output" class="min-h-[220px] lg:min-h-[300px] p-5 bg-gray-800 border border-gray-700 rounded-lg text-gray-300 overflow-y-auto whitespace-pre-wrap text-base leading-relaxed">
+                            <p class="text-sm text-gray-500 italic" id="placeholder-text">Click "Run Live Strategy Audit" to analyze your content. Expect 10-20 seconds for analysis.</p>
+                        </div>
+                        <p id="loading-indicator" class="mt-4 text-indigo-400 text-center hidden">Analyzing content, please wait for insights...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Advantages Section (The Benefits / Why Us) -->
+        <section id="advantages" class="py-24 px-6 lg:px-8 bg-[var(--color-primary-dark)]">
+            <h2 class="text-4xl font-bold text-white text-center mb-16">
+                Your <span class="text-indigo-400">Competitive Advantage</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2.121 2.121M17 10h.01M15.414 14.586l2.121 2.121m-6.554-4.881l-1.928 1.928a3 3 0 11-4.243 4.243L10 17l4.586-4.586a3 3 0 000-4.243l-4.243-4.243a3 3 0 00-4.243 4.243L5 14"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Precision Targeting</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Reach ideal customers at the crucial moment they're seeking solutions. Zero wasted impressions, only highly qualified, context-aware recommendations delivered by AI.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9-3 4.03-3 9 1.343 9 3 9z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Multi-Platform Coverage</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Optimize your presence across all major AI systems including ChatGPT, Claude, and Gemini. Guarantee pervasive visibility across the entire generative AI ecosystem.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V4m0 0l-1 1M12 4l1 1m0 0v4m-4 8v-4m0 0h-4m0 0l-1 1m1-1l1-1m-1 1h4m4 0v4m0 0h4m0 0l1-1m-1 1l-1-1m1 1v-4m-4-8v-4m0 0h4m0 0l1 1m-1 1l-1-1m1-1h-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Measurable Results</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Gain transparent insights into your AI visibility with our proprietary analytics. Monitor mention frequency, sentiment, and conversion attribution from AI-driven traffic.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">First-Mover Advantage</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Seize dominance in AI recommendations before the market becomes saturated. Early adoption yields exponential returns and establishes an insurmountable market lead.</p>
+                </div>
+                
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a11.955 11.955 0 01-.597-.938 12.004 12.004 0 01-1.272-1.928 10.99 10.99 0 01-2.482-3.085 10.05 10.05 0 00-1.85 2.155c-.752 1.258-1.5 2.871-2.24 4.834a.978.978 0 00-.094.347c-.012.08-.023.16-.034.24-.01.077-.021.154-.031.232l-1.644 11.5c-.015.105-.022.21-.022.318 0 1.21.983 2.193 2.193 2.193.308 0 .604-.06.877-.17l4.026-1.688c.32-.134.618-.3.896-.51a1.002 1.002 0 00.354-.347c.22-.38.41-.78.57-1.196.16-.416.29-.844.38-1.28l.06-.27.02-.09c.12-.54.21-.92.21-1.12 0-.204-.06-.39-.17-.55a1.003 1.003 0 00-.36-.347l-1.688-4.026c-.11-.273-.17-.569-.17-.877 0-1.21.983-2.193 2.193-2.193.108 0 .213.007.318.022l11.5 1.644c.078.01.156.021.234.032.078.01.155.022.232.033.116.015.234.024.354.024a1.003 1.003 0 00.347-.094c.38-.22.78-.41 1.196-.57.416-.16.844-.29 1.28-.38l.27-.06.09-.02c.54-.12.92-.21 1.12-.21.204 0 .39.06.55.17a1.003 1.003 0 00.347.36l4.026 1.688c.273.11.569.17.877.17 1.21 0 2.193-.983 2.193-2.193 0-.108-.007-.213-.022-.318L13.524 3.472z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Brand Authority</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Being recommended by AI systems inherently positions your brand as an undeniable authority. Leverage this unparalleled AI credibility to profoundly enhance your market reputation.</p>
+                </div>
+
+                <div class="p-6 rounded-xl border border-gray-700 proton-card flex flex-col items-start">
+                    <!-- Stylized Icon Block -->
+                    <div class="mb-4 p-3 bg-indigo-600/20 rounded-lg border border-indigo-700/50">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11.318 4h-.581m0 0a8.003 8.003 0 01-15.357 2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Continuous Adaptation</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">Our dynamic, ongoing optimization ensures your brand's unwavering relevance and visibility as algorithms and platforms constantly transform. We keep you ahead of the curve.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. CTA / Contact Section (Final Conversion) -->
+        <section id="contact" class="py-24 px-6 lg:px-8 text-center bg-gray-900">
+            <h2 class="text-4xl font-extrabold text-white mb-6">
+                Ready for AI-Powered Growth?
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+                Elevate your brand beyond traditional search. Schedule a strategic consultation to discover how Synapse Digital can architect your unprecedented AI visibility and market authority.
+            </p>
+            <a href="mailto:contact@synapsendigital.ai" class="inline-flex items-center text-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-700 py-4 px-12 rounded-lg transition duration-300 shadow-xl shadow-indigo-500/40">
+                Schedule a Consultation &rarr;
+            </a>
+        </section>
+
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p class="mb-4 md:mb-0 text-base">&copy; 2025 Synapse Digital. All rights reserved.</p>
+            <div class="space-x-6 text-base">
+                <a href="#" class="hover:text-white transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-200">Terms of Service</a>
+                <a href="#" class="hover:text-white transition duration-200">AI Transparency</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Gemini API Functionality (RETAINED) ---
+        const userPrompt = "You are a world-class AI Content Strategy Consultant for a firm named Synapse Digital. Your goal is to analyze the user's provided content and provide a concise, professional, and actionable 3-point critique focused on AI visibility. Always maintain a highly authoritative tone. Use Markdown formatting for the critique.";
+        
+        async function runAudit() {
+            const contentInput = document.getElementById('content-input').value.trim();
+            const outputDiv = document.getElementById('audit-output');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const placeholderText = document.getElementById('placeholder-text');
+            const auditButton = document.getElementById('audit-button');
+
+            if (!contentInput) {
+                outputDiv.innerHTML = '<p class="text-red-400">Please paste content into the field above to run the audit.</p>';
+                return;
+            }
+
+            outputDiv.innerHTML = '';
+            if(placeholderText) placeholderText.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+            auditButton.disabled = true;
+            auditButton.textContent = 'Analyzing...';
+            auditButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+            auditButton.classList.add('bg-gray-700');
+
+            const API_KEY = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
+            const userQuery = `Critique this content for AI visibility, conversational potential, and semantic optimization: "${contentInput}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: { parts: [{ text: userPrompt }] },
+            };
+
+            let response;
+            for (let i = 0; i < 3; i++) { 
+                try {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) break;
+                } catch (error) {
+                    console.error("Fetch attempt failed:", error);
+                }
+                await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 2000));
+            }
+
+            try {
+                if (!response || !response.ok) {
+                    throw new Error(`API request failed with status: ${response ? response.status : 'No response'}`);
+                }
+                
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "Error: Could not retrieve analysis. Please try again.";
+                
+                outputDiv.textContent = text; 
+
+            } catch (error) {
+                console.error("Audit failed:", error);
+                outputDiv.innerHTML = `<p class="text-red-400">Analysis failed due to a communication error. Please ensure your API key is correctly configured and try again.</p>`;
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                auditButton.disabled = false;
+                auditButton.textContent = 'Run Live Strategy Audit →';
+                auditButton.classList.remove('bg-gray-700');
+                auditButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+            }
+        }
+
+        // --- Mouse Light Animation (RETAINED) ---
+        const mouseLight = document.getElementById('mouse-light');
+        let mouseX = 0;
+        let mouseY = 0;
+        let lightX = 0;
+        let lightY = 0;
+        const speed = 0.1; // Smoothness of follow (0-1, lower is smoother)
+
+        function animateLight() {
+            // Linear Interpolation (LERP) for smooth following
+            lightX += (mouseX - lightX) * speed;
+            lightY += (mouseY - lightY) * speed;
+            
+            // Direct transform manipulation
+            mouseLight.style.transform = `translate(${lightX}px, ${lightY}px) translate(-50%, -50%)`;
+            
+            // Use requestAnimationFrame for high-performance animation
+            requestAnimationFrame(animateLight);
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Start the animation loop
+        requestAnimationFrame(animateLight);
+
+        // --- Number Animation for Metrics (RETAINED) ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const numberObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const endValueText = target.textContent;
+                    const endValue = parseFloat(endValueText.replace(/[^\d.]/g, ''));
+                    let startValue = 0;
+                    const duration = 2000;
+                    let startTime = null;
+
+                    function animateNumber(currentTime) {
+                        if (!startTime) startTime = currentTime;
+                        const progress = (currentTime - startTime) / duration;
+                        const currentValue = Math.min(progress, 1) * endValue;
+                        
+                        let displayValue = (Math.round(currentValue * 100) / 100);
+                        
+                        if (endValueText.includes('B+')) displayValue += 'B+';
+                        if (endValueText.includes('%')) displayValue += '%';
+                        if (endValueText.includes('24/7')) displayValue = '24/7';
+
+                        target.textContent = displayValue;
+                        
+                        if (progress < 1 && displayValue !== '24/7') {
+                            requestAnimationFrame(animateNumber);
+                        } else {
+                            target.textContent = endValueText; 
+                        }
+                    }
+                    requestAnimationFrame(animateNumber);
+                    observer.unobserve(target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animated-number').forEach(number => {
+            numberObserver.observe(number);
+        });
+
+    </script>
+</body>
+</html>
